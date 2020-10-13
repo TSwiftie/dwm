@@ -32,7 +32,8 @@ static const char col_purple[]        = "#bd93f9";
 static const char col_red[]           = "#bd616a";
 static const char col_yello[]         = "#ebcb8b";
 //static const unsigned int baralpha  = 0xec;
-static const unsigned int baralpha    = 0xd0;
+//static const unsigned int baralpha    = 0xd0;
+static const unsigned int baralpha    = 0xff;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
