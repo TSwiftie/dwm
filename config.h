@@ -44,7 +44,6 @@ static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
 	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
-	[SchemeHid]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
