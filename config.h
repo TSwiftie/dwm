@@ -111,7 +111,7 @@ static Key keys[] = {
 	/* modifier            key                      function        argument */
 	{ MODKEY,              XK_d,                    spawn,          {.v = dmenucmd } },
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
-	{ MODKEY,              XK_g,                    spawn,          {.v = browsercmd } },
+	{ MODKEY,              XK_s,                    spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,    XK_w,                    spawn,          {.v = setqwertycmd } },
 	{ MODKEY|ShiftMask,    XK_p,                    spawn,          {.v = suspendcmd } },
 	{ MODKEY|ControlMask,  XK_s,                    spawn,          {.v = sktogglecmd } },
