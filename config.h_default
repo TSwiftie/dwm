@@ -19,26 +19,26 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "FiraCode Nerd Font Mono:size=13" };
 static const char dmenufont[]       = "FiraCode Nerd Font Mono:size=13";
-static const char col_background[]    = "#2e3440";
+static const char col_background[]    = "#282a36";
 static const char col_currentline[]   = "#44475a";
-static const char col_selection[]     = "#4c566a";
-static const char col_foreground[]    = "#d8dee9";
+static const char col_selection[]     = "#44475a";
+static const char col_foreground[]    = "#f8f8f2";
 static const char col_comment[]       = "#6272a4";
-static const char col_cyan[]          = "#88c0d0";
+static const char col_cyan[]          = "#8be9fd";
 static const char col_green[]         = "#50fa7b";
 static const char col_orange[]        = "#ffb86c";
 static const char col_pink[]          = "#ff79c6";
 static const char col_purple[]        = "#bd93f9";
-static const char col_red[]           = "#bd616a";
-static const char col_yello[]         = "#ebcb8b";
-//static const unsigned int baralpha  = 0xec;
+static const char col_red[]           = "#ff5555";
+static const char col_yello[]         = "#f1fa8c";
+//static const unsigned int baralpha  = 0xbf;
 static const unsigned int baralpha    = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_foreground, col_background, col_background },
-	[SchemeSel]  = { col_foreground, col_selection,  col_cyan  },
-	[SchemeHid]  = { col_selection,  col_background, col_background },
+	[SchemeSel]  = { col_foreground, col_selection,  col_purple  },
+	[SchemeHid]  = { col_selection,  col_background, col_background  },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -47,7 +47,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "\uf303", "\uf269", "\uf15b", "\uf001", "\ue62e", "\uf251", "\ue727", "\uf537", "\uf684" };
+static const char *tags[] = { "\uf303", "\ue743", "\uf15b", "\uf001", "\ue62e", "\uf251", "\ue727", "\uf537", "\uf684" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -89,8 +89,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_background, "-nf", col_selection, "-sb", col_selection, "-sf", col_foreground, NULL };
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
-static const char *browsercmd[]  = { "firefox", NULL };
+static const char *termcmd[]  = { "st", NULL };
+static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 
 static const char *upvol[]   = { "/home/ts/scripts/vol-up.sh",  NULL };
 static const char *downvol[] = { "/home/ts/scripts/vol-down.sh",  NULL };
@@ -111,7 +111,7 @@ static Key keys[] = {
 	/* modifier            key                      function        argument */
 	{ MODKEY,              XK_d,                    spawn,          {.v = dmenucmd } },
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
-	{ MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
+	{ MODKEY,              XK_s,                    spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,    XK_w,                    spawn,          {.v = setqwertycmd } },
 	{ MODKEY|ShiftMask,    XK_p,                    spawn,          {.v = suspendcmd } },
 	{ MODKEY|ControlMask,  XK_s,                    spawn,          {.v = sktogglecmd } },
@@ -183,3 +183,4 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
