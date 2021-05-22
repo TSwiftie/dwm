@@ -91,6 +91,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
+static const char *lockcmd[]  = { "lock", NULL };
 
 static const char *upvol[]   = { "/home/ts/scripts/vol-up.sh",  NULL };
 static const char *downvol[] = { "/home/ts/scripts/vol-down.sh",  NULL };
@@ -123,6 +124,7 @@ static Key keys[] = {
 	{ MODKEY,              XK_bracketright,         spawn,          {.v = upvol   } },
 	{ MODKEY,              XK_b,                    spawn,          {.v = wpcmd } },
 	{ MODKEY,              XK_p,                    spawn,          {.v = screenshotcmd } },
+	{ MODKEY|ControlMask,  XK_l,                    spawn,          {.v = lockcmd } },
 	{ MODKEY|ShiftMask,    XK_j,                    rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,    XK_k,                    rotatestack,    {.i = -1 } },
 	{ MODKEY,              XK_j,                    focusstack,     {.i = +1 } },
